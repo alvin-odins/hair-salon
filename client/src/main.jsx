@@ -18,7 +18,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="staff" element={<Staff/>}/>
         <Route path="services" element={<Services/>}/>
         <Route path="booking" element={<Booking/>}/>
-        <Route path="admin" element={<admin/>}/>
+        <Route path="admin" element={<Admin/>}/>
       </Route>
     </Routes>
   </Router>
