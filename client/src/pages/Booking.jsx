@@ -54,7 +54,7 @@ const handleSubmit = async(e) => {
 }
 
 
-  
+const Booking = () => {
   return (
     <div>
       <h2>Book an Appointment</h2>
@@ -125,5 +125,6 @@ const handleSubmit = async(e) => {
       </form>
     </div>
   )
+}
 
 export default Booking;
