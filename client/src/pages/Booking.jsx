@@ -54,7 +54,15 @@ const stylists = [
         />
         </div>
 
-        
+        <div>
+        <label htmlFor="">Date:</label>
+        <Calendar
+            onChange={setDate}
+            value={date}
+            required
+        />
+        <p>Selected Date: {date.toLocalDateString()}</p>
+        </div>
 
         <div>
         <label htmlFor="service">Services: </label>
