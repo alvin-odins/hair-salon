@@ -26,6 +26,11 @@ const stylists = [
   'Cyril lehoof'
 ]
 
+const [name, setName] = useState('')
+const [email, setEmail] = useState('')
+const [date, setDate] = useState(new Date())
+const [service, setService] = useState('')
+const [stylist, setStylist] = useState('')
 
   
   return (
