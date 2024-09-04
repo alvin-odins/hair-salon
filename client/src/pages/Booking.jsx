@@ -32,6 +32,28 @@ const [date, setDate] = useState(new Date())
 const [service, setService] = useState('')
 const [stylist, setStylist] = useState('')
 
+const navigate = useNavigate()
+
+const handleSubmit = async(e) => {
+  e.preventDefault()
+  const response = await fetch('http://localhost:5000/api/bookings', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({name, email, date, service, stylist})
+  })
+
+  if(response.ok) {
+    alert(`Booking for ${name} on ${date.toLocalDateString()} was succesful. We will send an email to ${email} with available times.`)
+    navigate('/')
+  } else {
+    alert('Booking failed. Please try again.')
+  }
+
+}
+
+
   
   return (
     <div>
