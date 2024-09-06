@@ -14,3 +14,14 @@ mongoose.connect(
 }).catch((error) => {
   console.error("Error", error)
 })
+
+const BookingSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  email: { type: String, required: true },
+  date: { type: Date, required: true },
+  service: { type: String, required: true },
+  stylist: { type: String, required: false },
+})
+
+const Booking = mongoose.model('Booking', BookingSchema)
+
