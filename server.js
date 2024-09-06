@@ -47,6 +47,6 @@ app.post('api/bookings', async (req, res) => {
   }
 })
 
-app.listen(5000, () => {
+app.listen(6000, () => {
   console.log('server is performing optimally')
 })
