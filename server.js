@@ -25,7 +25,7 @@ const BookingSchema = new mongoose.Schema({
 
 const Booking = mongoose.model('Booking', BookingSchema)
 
-app.get('api/bookings', async (req, res) => {
+app.get('/api/bookings', async (req, res) => {
   try{
     const bookings = await Booking.find().sort({date: 1})
     res.json(bookings)
@@ -35,7 +35,7 @@ app.get('api/bookings', async (req, res) => {
   }
 })
 
-app.post('api/bookings', async (req, res) => {
+app.post('/api/bookings', async (req, res) => {
   try{
     const { name, email, date, service, stylist } = req.body
     const newBooking = new Booking({ name, email, date, service, stylist })
