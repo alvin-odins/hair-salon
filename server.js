@@ -25,3 +25,24 @@ const BookingSchema = new mongoose.Schema({
 
 const Booking = mongoose.model('Booking', BookingSchema)
 
+app.get('api/bookings', async (req, res) => {
+  try{
+    const bookings = await Booking.find().sort({date: 1})
+    res.json(bookings)
+  } catch (error) {
+    console.error('Error fetching bookins', Error)
+    res.status(500).json({ message: 'Error fetching bookings' })
+  }
+})
+
+app.post('api/bookings', async (req, res) => {
+  try{
+    const { name, email, date, service, stylist } = req.body
+    const newBooking = new Booking({ name, email, date, service, stylist })
+    await newBooking.save()
+    res.json(newBooking)
+  } catch (error) {
+    console.error('Error saving bookins', Error)
+    res.status(500).json({ message: 'Error saving bookings' })
+  }
+})
