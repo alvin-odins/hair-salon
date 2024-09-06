@@ -89,7 +89,7 @@ const Booking = () => {
             value={date}
             required
         />
-        <p>Selected Date: {date.toLocalDateString()}</p>
+        <p>Selected Date: {date.toLocaleDateString()}</p>
         </div>
 
         <div>
