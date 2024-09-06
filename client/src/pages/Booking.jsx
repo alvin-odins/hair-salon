@@ -48,7 +48,7 @@ const Booking = () => {
     })
 
     if(response.ok) {
-      alert(`Booking for ${name} on ${date.toLocalDateString()} was succesful. We will send an email to ${email} with available times.`)
+      alert(`Booking for ${name} on ${date.toLocaleDateString()} was succesful. We will send an email to ${email} with available times.`)
       navigate('/')
     } else {
       alert('Booking failed. Please try again.')
