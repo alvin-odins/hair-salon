@@ -97,7 +97,7 @@ const Booking = () => {
         <select 
           id="service"
           value={service}
-          onChange={(e) => setService(e.target-value)}
+          onChange={(e) => setService(e.target.value)}
           required
         >
           <option value="" disabled>Select a service</option>
@@ -112,7 +112,7 @@ const Booking = () => {
         <select 
           id="stylist"
           value={stylist}
-          onChange={(e) => setStylist(e.target-value)}
+          onChange={(e) => setStylist(e.target.value)}
         >
           <option value="" disabled>Select a stylist (optional) </option>
           {stylists.map((stylists,index) => (
