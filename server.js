@@ -46,3 +46,7 @@ app.post('api/bookings', async (req, res) => {
     res.status(500).json({ message: 'Error saving bookings' })
   }
 })
+
+app.listen(5000, () => {
+  console.log('server is performing optimally')
+})
